@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Primer formulario</title>
+  </head>
+
+<script>  
+  function valiateform(){  
+
+    var name=document.miform.nombre.value;  
+    var password=document.miform.cont.value;  
+    if (name==null || name=="")
+    {  
+      console.log("hola mundo");  
+      alert("El nombre no puede estar en blanco");  
+      return false;  
+    }
+    else if(password.length<6)
+    {  
+      console.log(name.length);  
+      alert("La contraseña debe tener como minimo 6 caracteres.");  
+      return false;  
+      }  
+  }  
+</script>  
+
+
+<body>  
+  <h1> Primer formulario </h1>
+  <h2>formulario</h2>
+
+<form name="miform" method="post" action="form2.html" onsubmit="return valiateform()" >  
+  Nombre: <input type="text" name="nombre"><br/>  
+  Contraseña: <input type="password" name="cont"><br/>  
+  <input type="submit" value="Enviar">  
+</form>  
+
+</body>
+</html>
